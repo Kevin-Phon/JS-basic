@@ -1,24 +1,22 @@
-// Variables
-// //normal variable
-// var name = "KayAs";
-// console.log(name);
+//function expression
+// let getName = function(){
+//     console.log("Kevin")
+// }
+// getName();
 
-// //variable work with functions
-// let namee = "Kevin";
-// console.log(namee);
-
-// //constant variable (can't change)
-// const PI = 3.14;
-// console.log(PI)
-
-Function
-//Normal function
-// function getName(){
+//ES6 function
+// let getName = () =>{
 //     console.log("KayAs")
 // }
 // getName();
 
-function getName(){
-    return("KayAs")
-}
-console.log(getName());
+//es6 with return and parameter
+// let getNamee = (name) =>{
+//     return name;
+// }
+// console.log(getNamee("Kevin"))
+
+//es6 function if only one parameter
+// let getName = name => name;
+// console.log(getName("Kevin"));
+    
