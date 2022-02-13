@@ -1,22 +1,24 @@
-//function expression
-// let getName = function(){
-//     console.log("Kevin")
-// }
-// getName();
+//Array and array function
 
-//ES6 function
-// let getName = () =>{
-//     console.log("KayAs")
-// }
-// getName();
+names = [
+    "Kevin",
+    "KayAs",
+    "KyawSwa"
+]
 
-//es6 with return and parameter
-// let getNamee = (name) =>{
-//     return name;
-// }
-// console.log(getNamee("Kevin"))
+//foreach
+// names.forEach((name) => {
+//     console.log(name)
+// })
 
-//es6 function if only one parameter
-// let getName = name => name;
-// console.log(getName("Kevin"));
-    
+//filter
+// let filterNames = names.filter((name) => {
+//     return name == "Kevin"
+// });
+// console.log(filterNames);
+
+//map
+// let mappedNames = names.map((name) => {
+//     return "Mr. " + name
+// })
+// console.log(mappedNames)
