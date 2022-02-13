@@ -1,18 +1,10 @@
-//object
+//function constructor and 'new' keyword
 
-let bio = {
-    //key : //value
-    name : "Kevin",
-    age : 23,
-    isHandsome : true,
-    currentYear : 2022,
-    
-    //function in object(method)
-    bornYear(){
-        return 1999-this.currentYear;
-    }
+function Person(name,age){
+    this.name = name;
+    this.age = age;
 }
 
-// console.log(bio);
-// console.log(bio.name);
-console.log(bio.bornYear());
+   //object
+let person1 = new Person("Kevin",23);
+console.log(person1);
