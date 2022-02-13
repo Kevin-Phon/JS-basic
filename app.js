@@ -1,24 +1,18 @@
-//Array and array function
+//object
 
-names = [
-    "Kevin",
-    "KayAs",
-    "KyawSwa"
-]
+let bio = {
+    //key : //value
+    name : "Kevin",
+    age : 23,
+    isHandsome : true,
+    currentYear : 2022,
+    
+    //function in object(method)
+    bornYear(){
+        return 1999-this.currentYear;
+    }
+}
 
-//foreach
-// names.forEach((name) => {
-//     console.log(name)
-// })
-
-//filter
-// let filterNames = names.filter((name) => {
-//     return name == "Kevin"
-// });
-// console.log(filterNames);
-
-//map
-// let mappedNames = names.map((name) => {
-//     return "Mr. " + name
-// })
-// console.log(mappedNames)
+// console.log(bio);
+// console.log(bio.name);
+console.log(bio.bornYear());
