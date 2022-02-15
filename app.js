@@ -1,10 +1,14 @@
-//function constructor and 'new' keyword
+//request http request and get response date
+//https://jsonplaceholder.typicode.com/todos/1
 
-function Person(name,age){
-    this.name = name;
-    this.age = age;
-}
+let request = new XMLHttpRequest;
 
-   //object
-let person1 = new Person("Kevin",23);
-console.log(person1);
+request.addEventListener("readystatechange",()=>{
+    //console.log(request,request.readyState);//4 readystate
+    if(request.readyState == 4){
+        console.log(request.responseText);
+    }
+})
+
+request.open("GET","https://jsonplaceholder.typicode.com/todos")
+request.send();
