@@ -1,16 +1,24 @@
-//request http request and get response date
-//https://jsonplaceholder.typicode.com/todos/1
+//callback functions
 
-let request = new XMLHttpRequest;
+let getTodos = (callback) =>{
+    let request = new XMLHttpRequest;
 
-request.addEventListener("readystatechange",()=>{
-    //console.log(request,request.readyState);//4 readystate
+    request.addEventListener("readystatechange",()=>{
     if(request.readyState == 4 && request.status == 200){
-        console.log(request.responseText);
+        callback(request.responseText);
     }else if(request.status == 404){
-        console.log("Your link is unavailable!")
+        callback("Your link is unavaliable");
     }
 })
 
-request.open("GET","https://jsonplaceholder.typicode.com/todos")
-request.send();
+    request.open("GET","https://jsonplaceholder.typicode.com/todos")
+    request.send();
+}
+
+getTodos((data,err) => {
+    if(data){
+        console.log(data);
+    }else{
+        console.log(err);
+    }
+});
