@@ -25,7 +25,11 @@ let getTodos = (resource) =>{
 getTodos("jsonfiles/kevin.json")
 .then((data)=>{
     console.log(data);
-    return getTodos("jsonfiles/kayas.json")
+    return getTodos("jsonfiles/kayas.json");
+})
+.then((data)=>{
+    console.log(data);
+    return getTodos("jsonfiles/kyawswa.json");
 })
 .then((data)=>{
     console.log(data);
