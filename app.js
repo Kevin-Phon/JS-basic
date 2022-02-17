@@ -1,17 +1,18 @@
-//callback functions
+//change json format to obj and create own json file
 
 let getTodos = (callback) =>{
     let request = new XMLHttpRequest;
 
     request.addEventListener("readystatechange",()=>{
     if(request.readyState == 4 && request.status == 200){
-        callback(request.responseText);
+        let datas = JSON.parse(request.responseText); //change json to obj
+        callback(request.responseText,undefined)
     }else if(request.status == 404){
-        callback("Your link is unavaliable");
+        callback(undefined,"Your link is unavaliable");
     }
 })
 
-    request.open("GET","https://jsonplaceholder.typicode.com/todos")
+    request.open("GET","kevin.json")
     request.send();
 }
 

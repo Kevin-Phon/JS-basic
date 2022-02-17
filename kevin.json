@@ -1,0 +1,20 @@
+[
+    {
+    "name" : "Kevin",
+    "age" : 23,
+    "isHandsome" : true,
+    "location" : "Los Angeles"
+    },
+    {
+    "name" : "Kevin",
+    "age" : 23,
+    "isHandsome" : true,
+    "location" : "Los Angeles"
+    },
+    {
+    "name" : "Kevin",
+    "age" : 23,
+    "isHandsome" : true,
+    "location" : "Los Angeles"
+    }
+]
