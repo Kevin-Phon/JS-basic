@@ -2,7 +2,10 @@
 
 fetch("jsonfiles/kevin.json")
 .then((response)=>{
-    // console.log("resolve",response.json())
+
+    if(response.status == 404){
+        throw new Error("Link is not avaliable!");
+    }
     return response.json() //promise,so use return and .then
 })
 .then((data)=>{
