@@ -1,16 +1,10 @@
-//fetch api
+let getJson =async ()=>{
+                        //promise,so use await key
+    let response = await fetch("jsonfiles/kevin.json")//will return a respose (datas),use variable to catch
+    let datas = await response.json();
+    return datas;
+}
 
-fetch("jsonfiles/kevin.json")
-.then((response)=>{
-
-    if(response.status == 404){
-        throw new Error("Link is not avaliable!");
-    }
-    return response.json() //promise,so use return and .then
+getJson().then((datas)=>{
+    console.log(datas);
 })
-.then((data)=>{
-    console.log(data)
-})
-.catch((err)=>{
-    console.log(err)
-});
